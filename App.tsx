@@ -9,7 +9,7 @@ import TutorView from './components/TutorView';
 import { StudySession, ViewState, StudyStyle } from './types';
 import { processStudyMaterial } from './services/geminiService';
 // Added ChevronRight to imports to fix missing symbol errors
-import { Upload, FileType, Languages, LayoutTemplate, BrainCircuit, Rocket, Loader2, Sparkles, AlertCircle, Bookmark, ChevronRight } from 'lucide-react';
+import { Upload, FileType, Languages, LayoutTemplate, BrainCircuit, Rocket, Loader2, Sparkles, AlertCircle, Bookmark, ChevronRight, Layers, HelpCircle } from 'lucide-react';
 // @ts-ignore
 import mammoth from 'mammoth';
 
@@ -19,6 +19,8 @@ const App: React.FC = () => {
   const [isProcessing, setIsProcessing] = useState(false);
   const [style, setStyle] = useState<StudyStyle>('Cornell');
   const [language, setLanguage] = useState('English');
+  const [flashcardCount, setFlashcardCount] = useState(10);
+  const [quizCount, setQuizCount] = useState(5);
   const [error, setError] = useState<string | null>(null);
 
   const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -69,7 +71,7 @@ const App: React.FC = () => {
         throw new Error("The file seems empty or contains unreadable text.");
       }
 
-      const result = await processStudyMaterial(content, image, language, style);
+      const result = await processStudyMaterial(content, image, language, style, flashcardCount, quizCount);
       
       if (!result.title) {
         throw new Error("Could not extract meaningful study data. Try a different section of text.");
@@ -182,11 +184,45 @@ const App: React.FC = () => {
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               <div className="bg-white border border-slate-200 rounded-3xl p-8 shadow-sm">
                 <div className="space-y-4">
-                  <div>
-                    <label className="text-sm font-black text-slate-400 uppercase tracking-widest mb-2 block">Language</label>
-                    <select value={language} onChange={(e) => setLanguage(e.target.value)} className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 font-bold text-slate-700">
-                      {languages.map(l => <option key={l} value={l}>{l}</option>)}
-                    </select>
+                  <div className="flex gap-4">
+                    <div className="flex-1">
+                      <label className="text-sm font-black text-slate-400 uppercase tracking-widest mb-2 block">Language</label>
+                      <select value={language} onChange={(e) => setLanguage(e.target.value)} className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 font-bold text-slate-700">
+                        {languages.map(l => <option key={l} value={l}>{l}</option>)}
+                      </select>
+                    </div>
+                  </div>
+                  <div className="flex gap-4">
+                    <div className="flex-1">
+                      <label className="text-sm font-black text-slate-400 uppercase tracking-widest mb-2 block flex items-center gap-1">
+                        Flashcards <Layers size={12} className="text-indigo-400" />
+                      </label>
+                      <select 
+                        value={flashcardCount} 
+                        onChange={(e) => setFlashcardCount(Number(e.target.value))} 
+                        className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 font-bold text-slate-700"
+                      >
+                        <option value={5}>5 Cards</option>
+                        <option value={10}>10 Cards</option>
+                        <option value={15}>15 Cards</option>
+                        <option value={20}>20 Cards</option>
+                      </select>
+                    </div>
+                    <div className="flex-1">
+                      <label className="text-sm font-black text-slate-400 uppercase tracking-widest mb-2 block flex items-center gap-1">
+                        Quiz <HelpCircle size={12} className="text-amber-500" />
+                      </label>
+                      <select 
+                        value={quizCount} 
+                        onChange={(e) => setQuizCount(Number(e.target.value))} 
+                        className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 font-bold text-slate-700"
+                      >
+                        <option value={3}>3 Questions</option>
+                        <option value={5}>5 Questions</option>
+                        <option value={10}>10 Questions</option>
+                        <option value={15}>15 Questions</option>
+                      </select>
+                    </div>
                   </div>
                   <div>
                     <label className="text-sm font-black text-slate-400 uppercase tracking-widest mb-2 block">Notes Format</label>
