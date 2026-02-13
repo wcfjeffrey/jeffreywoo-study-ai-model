@@ -1,0 +1,7 @@
+{
+  "name": "JeffreyWooStudy",
+  "description": "An intelligent study platform that transforms any document or image into interactive flashcards, Cornell notes, mindmaps, and practice quizzes using advanced learning science.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
