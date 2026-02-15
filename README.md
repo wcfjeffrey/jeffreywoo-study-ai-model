@@ -23,11 +23,11 @@ Most apps just digitize your notes. **JeffreyWooStudy** goes further — embeddi
 
 Disclaimer: This app provides AI‑driven insights for educational purposes only. It does not replace professional academic instruction.
 
-# Run and deploy your AI Studio app
+# Run and deploy this AI Studio app
 
-This contains everything you need to run your app locally.
+This contains everything you need to run this app locally.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1A0Hzxzex1ahmm-jMgHDeFvXAAU4z3ucZ
+View this app in AI Studio: https://ai.studio/apps/drive/1A0Hzxzex1ahmm-jMgHDeFvXAAU4z3ucZ
 
 ## Run Locally
 
@@ -36,6 +36,6 @@ View your app in AI Studio: https://ai.studio/apps/drive/1A0Hzxzex1ahmm-jMgHDeFv
 
 1. Install dependencies:
    `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key after you create [.env.local](.env.local) file
 3. Run the app:
    `npm run dev`
