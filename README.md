@@ -23,7 +23,7 @@ Most apps just digitize your notes. **JeffreyWooStudy** goes further — embeddi
 
 Disclaimer: This app provides AI‑driven insights for educational purposes only. It does not replace professional academic instruction.
 
-## Run Locally
+## ⚙️ Run Locally
 
 **Prerequisites:**  Node.js
 
@@ -33,7 +33,7 @@ Disclaimer: This app provides AI‑driven insights for educational purposes only
 3. Run the app:
    `npm run dev`
 
-## Sample
+## 📋 Sample
 
 <img src="assets/JeffreyWooStudy1.png" alt="JeffreyWooStudy1" width="1200" height="900" />
 <img src="assets/JeffreyWooStudy2.png" alt="JeffreyWooStudy2" width="1200" height="900" />
