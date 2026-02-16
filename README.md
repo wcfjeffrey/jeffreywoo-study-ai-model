@@ -13,7 +13,7 @@ Not your typical study app!
 - 🌍 **Multilingual Support** — study in multiple languages with accurate understanding and translation  
 - 🔗 **Seamless Export** — send your study sets to Anki, Quizlet, or save them as notes and mindmaps  
 
-## 🚀 Why Choose JeffreyWooStudy?
+## 🚀 Why Choose JeffreyWooStudy
 Most apps just digitize your notes. **JeffreyWooStudy** goes further — embedding AI into your study workflow so you can learn smarter, retain more, and feel confident faster. Every feature is designed to align with how the human brain learns best.
 
 ## 📦 Getting Started
