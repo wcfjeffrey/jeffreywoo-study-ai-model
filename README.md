@@ -1,5 +1,5 @@
 <div align="center">
-<img src="assets/JeffreyWooStudy.png" alt="GHBanner" width="1200" height="900" />
+<img src="assets/JeffreyWooStudy.png" alt="JeffreyWooStudyBanner" width="1200" height="900" />
 </div>
 
 Not your typical study app!
@@ -33,9 +33,23 @@ View this app in AI Studio: https://ai.studio/apps/drive/1A0Hzxzex1ahmm-jMgHDeFv
 
 **Prerequisites:**  Node.js
 
-
 1. Install dependencies:
    `npm install`
 2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) file to your Gemini API key after you create [.env.local](.env.local) file
 3. Run the app:
    `npm run dev`
+
+## Sample
+
+<img src="assets/JeffreyWooStudy1.png" alt="JeffreyWooStudy1" width="1200" height="900" />
+<img src="assets/JeffreyWooStudy2.png" alt="JeffreyWooStudy2" width="1200" height="900" />
+<img src="assets/JeffreyWooStudy3.png" alt="JeffreyWooStudy3" width="1200" height="900" />
+<img src="assets/JeffreyWooStudy4.png" alt="JeffreyWooStudy4" width="1200" height="900" />
+<img src="assets/JeffreyWooStudy5.png" alt="JeffreyWooStudy5" width="1200" height="900" />
+<img src="assets/JeffreyWooStudy6.png" alt="JeffreyWooStudy6" width="1200" height="900" />
+<img src="assets/JeffreyWooStudy7.png" alt="JeffreyWooStudy7" width="1200" height="900" />
+<img src="assets/JeffreyWooStudy8.png" alt="JeffreyWooStudy8" width="1200" height="900" />
+<img src="assets/JeffreyWooStudy9.png" alt="JeffreyWooStudy9" width="1200" height="900" />
+<img src="assets/JeffreyWooStudy10.png" alt="JeffreyWooStudy10" width="1200" height="900" />
+<img src="assets/JeffreyWooStudy11.png" alt="JeffreyWooStudy11" width="1200" height="900" />
+<img src="assets/JeffreyWooStudy12.png" alt="JeffreyWooStudy12" width="1200" height="900" />
