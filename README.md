@@ -23,12 +23,6 @@ Most apps just digitize your notes. **JeffreyWooStudy** goes further — embeddi
 
 Disclaimer: This app provides AI‑driven insights for educational purposes only. It does not replace professional academic instruction.
 
-# Run and deploy this AI Studio app
-
-This contains everything you need to run this app locally.
-
-View this app in AI Studio: https://ai.studio/apps/drive/1A0Hzxzex1ahmm-jMgHDeFvXAAU4z3ucZ
-
 ## Run Locally
 
 **Prerequisites:**  Node.js
