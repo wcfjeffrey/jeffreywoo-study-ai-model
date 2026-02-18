@@ -19,15 +19,20 @@
   "imports": {
     "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
     "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react-dom/client": "https://esm.sh/react-dom@19.2.4/client",
     "react/": "https://esm.sh/react@^19.2.4/",
+    "react/jsx-runtime": "https://esm.sh/react@19.2.4/jsx-runtime",
     "react": "https://esm.sh/react@^19.2.4",
-    "@google/genai": "https://esm.sh/@google/genai@^1.41.0",
     "mammoth": "https://esm.sh/mammoth@1.6.0"
   }
+  window.env = {
+    API_KEY: '{{VITE_API_KEY}}'
+  };
 }
 </script>
 </head>
 <body class="bg-slate-50 text-slate-900">
     <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
 </body>
 </html>
