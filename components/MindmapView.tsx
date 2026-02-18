@@ -1,65 +1,120 @@
-
 import React, { useState } from 'react';
-import { Network, Download, ChevronRight, Share2, Eye, Copy, Check, Code, ListOrdered } from 'lucide-react';
+import { Network, Download, ChevronRight, Share2, Eye, Copy, Check, Code, ListOrdered, FileText, GitMerge } from 'lucide-react';
 import { MindmapNode } from '../types';
 
 interface MindmapViewProps {
   root: MindmapNode;
 }
 
+// 定義顏色主題 - 使用色彩區分
+const COLORS = {
+  root: {
+    bg: 'bg-gradient-to-br from-purple-600 to-purple-700',
+    border: 'border-purple-800',
+    text: 'text-white',
+    shadow: 'shadow-purple-200',
+    dot: 'bg-purple-400',
+    light: 'bg-purple-50'
+  },
+  level1: { // Main Branch
+    bg: 'bg-gradient-to-br from-blue-500 to-blue-600',
+    border: 'border-blue-700',
+    text: 'text-white',
+    shadow: 'shadow-blue-200',
+    dot: 'bg-blue-400',
+    light: 'bg-blue-50'
+  },
+  level2: { // Sub-branch
+    bg: 'bg-gradient-to-br from-emerald-500 to-emerald-600',
+    border: 'border-emerald-700',
+    text: 'text-white',
+    shadow: 'shadow-emerald-200',
+    dot: 'bg-emerald-400',
+    light: 'bg-emerald-50'
+  },
+  level3: { // Detail
+    bg: 'bg-gradient-to-br from-amber-500 to-amber-600',
+    border: 'border-amber-700',
+    text: 'text-white',
+    shadow: 'shadow-amber-200',
+    dot: 'bg-amber-400',
+    light: 'bg-amber-50'
+  }
+};
+
 const TreeBranch: React.FC<{ node: MindmapNode; depth: number; isLast: boolean }> = ({ node, depth, isLast }) => {
-  const getStyles = (d: number) => {
+  // 根據深度選擇顏色
+  const getColorScheme = (d: number) => {
     switch (d) {
-      case 0: return 'bg-indigo-600 text-white border-indigo-700 shadow-xl ring-4 ring-indigo-100 text-lg font-black';
-      case 1: return 'bg-white text-indigo-700 border-indigo-200 shadow-md font-bold text-base hover:bg-indigo-50/30';
-      case 2: return 'bg-slate-50 text-slate-800 border-slate-200 shadow-sm text-sm font-semibold hover:border-indigo-300';
-      default: return 'bg-white text-slate-600 border-slate-100 shadow-none text-xs font-normal hover:bg-slate-50';
+      case 0: return COLORS.root;
+      case 1: return COLORS.level1;
+      case 2: return COLORS.level2;
+      default: return COLORS.level3;
     }
   };
 
-  const getLabelSuffix = (d: number) => {
-    if (d === 1) return <span className="ml-2 text-[9px] bg-indigo-100 text-indigo-600 px-1.5 py-0.5 rounded uppercase font-black tracking-tight">Main Branch</span>;
-    if (d === 2) return <span className="ml-2 text-[9px] bg-slate-200 text-slate-500 px-1.5 py-0.5 rounded uppercase font-black tracking-tight">Sub-branch</span>;
-    if (d >= 3) return <span className="ml-2 text-[9px] bg-emerald-50 text-emerald-600 px-1.5 py-0.5 rounded uppercase font-black tracking-tight">Detail</span>;
-    return null;
-  };
+  const colors = getColorScheme(depth);
 
   return (
     <div className="relative pl-10 md:pl-12 transition-all">
-      {/* Horizontal Connector Line */}
+      {/* Horizontal Connector Line - 使用對應層級的顏色 */}
       {depth > 0 && (
-        <div className="absolute left-0 top-7 w-10 md:w-12 h-px bg-slate-200" />
+        <div className={`absolute left-0 top-7 w-10 md:w-12 h-0.5 ${
+          depth === 1 ? 'bg-blue-300' : 
+          depth === 2 ? 'bg-emerald-300' : 
+          'bg-amber-300'
+        }`} />
       )}
-      
+
       {/* Vertical Parent Connector Line */}
       {depth > 0 && !isLast && (
-        <div className="absolute left-0 top-7 bottom-[-2.5rem] w-px bg-slate-200" />
+        <div className={`absolute left-0 top-7 bottom-[-2.5rem] w-0.5 ${
+          depth === 1 ? 'bg-blue-200' : 
+          depth === 2 ? 'bg-emerald-200' : 
+          'bg-amber-200'
+        }`} />
       )}
 
       {/* Vertical Corner Connector (for last items) */}
       {depth > 0 && isLast && (
-        <div className="absolute left-0 top-0 h-7 w-px bg-slate-200" />
+        <div className={`absolute left-0 top-0 h-7 w-0.5 ${
+          depth === 1 ? 'bg-blue-200' : 
+          depth === 2 ? 'bg-emerald-200' : 
+          'bg-amber-200'
+        }`} />
       )}
 
       <div className="flex items-center gap-3 group mt-8 first:mt-0">
-        <div className={`relative flex items-center gap-3 p-4 px-5 rounded-2xl border transition-all hover:translate-x-1 hover:shadow-lg cursor-default ${getStyles(depth)}`}>
-          {depth > 0 && <ChevronRight size={14} className="opacity-30 group-hover:opacity-60 transition-opacity" />}
+        <div className={`
+          relative flex items-center gap-3 p-4 px-5 rounded-2xl border-2 
+          transition-all hover:translate-x-1 hover:shadow-xl cursor-default
+          ${colors.bg} ${colors.border} ${colors.text} ${colors.shadow}
+          ${depth === 0 ? 'text-lg font-black shadow-2xl ring-4 ring-purple-100' : 
+            depth === 1 ? 'text-base font-bold' : 
+            depth === 2 ? 'text-sm font-semibold' : 
+            'text-xs font-medium'}
+        `}>
+          {depth > 0 && <ChevronRight size={14} className="opacity-50 group-hover:opacity-80 transition-opacity" />}
           <span className="whitespace-normal leading-snug">{node.label}</span>
-          {getLabelSuffix(depth)}
-          
-          {/* Node Dot Indicator */}
-          <div className={`absolute -left-1.5 top-1/2 -translate-y-1/2 w-3 h-3 rounded-full border-2 border-white shadow-sm transition-transform group-hover:scale-125 ${depth === 0 ? 'bg-indigo-400' : 'bg-slate-300'}`} />
+
+          {/* Node Dot Indicator - 使用對應層級的顏色 */}
+          <div className={`
+            absolute -left-1.5 top-1/2 -translate-y-1/2 
+            w-3 h-3 rounded-full border-2 border-white shadow-md 
+            transition-transform group-hover:scale-125
+            ${colors.dot}
+          `} />
         </div>
       </div>
 
       {node.children && node.children.length > 0 && (
         <div className="mt-2 space-y-4">
           {node.children.map((child, idx) => (
-            <TreeBranch 
-              key={idx} 
-              node={child} 
-              depth={depth + 1} 
-              isLast={idx === node.children!.length - 1} 
+            <TreeBranch
+              key={idx}
+              node={child}
+              depth={depth + 1}
+              isLast={idx === node.children!.length - 1}
             />
           ))}
         </div>
@@ -102,7 +157,13 @@ const MindmapView: React.FC<MindmapViewProps> = ({ root }) => {
       result = 'mindmap\n  root((' + node.label.replace(/[()]/g, '') + '))\n';
     } else {
       const indent = '  '.repeat(depth);
-      result = indent + node.label.replace(/[()]/g, '') + '\n';
+      if (depth === 2) {
+        result = indent + '[' + node.label.replace(/[()[\]]/g, '') + ']\n';
+      } else if (depth === 3) {
+        result = indent + '(' + node.label.replace(/[()[\]]/g, '') + ')\n';
+      } else {
+        result = indent + node.label.replace(/[()[\]]/g, '') + '\n';
+      }
     }
 
     if (node.children && node.children.length > 0) {
@@ -117,7 +178,7 @@ const MindmapView: React.FC<MindmapViewProps> = ({ root }) => {
     let text = '';
     if (activeMode === 'mermaid') text = generateMermaidCode(root);
     else if (activeMode === 'numbered') text = generateNumberedOutline(root);
-    
+
     if (text) {
       navigator.clipboard.writeText(text);
       setCopied(true);
@@ -128,17 +189,131 @@ const MindmapView: React.FC<MindmapViewProps> = ({ root }) => {
   const downloadText = () => {
     let text = '';
     let ext = 'txt';
-    if (activeMode === 'mermaid') { text = generateMermaidCode(root); ext = 'mmd'; }
-    else if (activeMode === 'numbered') text = generateNumberedOutline(root);
+    let filename = '';
+
+    if (activeMode === 'mermaid') {
+      text = generateMermaidCode(root);
+      ext = 'mmd';
+      filename = `mindmap-${Date.now()}.${ext}`;
+    }
+    else if (activeMode === 'numbered') {
+      text = generateNumberedOutline(root);
+      filename = `outline-${Date.now()}.txt`;
+    }
 
     if (text) {
       const blob = new Blob([text], { type: 'text/plain' });
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = `mindmap-${activeMode}.${ext}`;
+      a.download = filename;
       a.click();
+      URL.revokeObjectURL(url);
     }
+  };
+
+  // Render Mermaid diagram preview
+  const renderMermaidPreview = () => {
+    const code = generateMermaidCode(root);
+    return (
+      <div className="max-w-3xl mx-auto">
+        <div className="flex items-center justify-between mb-8 border-b border-slate-100 pb-4">
+          <h3 className="text-xl font-bold text-slate-800 flex items-center gap-2">
+            <GitMerge size={20} className="text-indigo-600" />
+            Mermaid.js Mindmap Code
+          </h3>
+          <span className="text-xs font-black text-slate-400 uppercase tracking-widest hidden sm:inline">
+            Compatible with Mermaid Live Editor
+          </span>
+        </div>
+        <div className="relative group">
+          <pre className="whitespace-pre-wrap font-mono text-indigo-100 leading-relaxed bg-gradient-to-br from-indigo-950 to-slate-900 p-8 md:p-12 rounded-3xl shadow-2xl overflow-auto max-h-[700px] text-sm md:text-base selection:bg-white/20 border border-indigo-800/30">
+            {code}
+          </pre>
+          <button
+            onClick={() => navigator.clipboard.writeText(code)}
+            className="absolute top-4 right-4 p-2 bg-indigo-800/50 hover:bg-indigo-700 rounded-lg transition-all opacity-0 group-hover:opacity-100"
+            title="Copy code"
+          >
+            <Copy size={16} className="text-white" />
+          </button>
+        </div>
+        <div className="mt-6 flex items-center justify-center gap-4">
+          <p className="text-sm text-slate-400 italic">
+            Copy this code and paste it into{' '}
+            <a
+              href="https://mermaid.live"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-indigo-600 hover:text-indigo-700 font-medium underline underline-offset-2"
+            >
+              Mermaid Live Editor
+            </a>
+            {' '}to visualize.
+          </p>
+        </div>
+      </div>
+    );
+  };
+
+  // Render numbered outline
+  const renderNumberedOutline = () => {
+    const outline = generateNumberedOutline(root);
+    return (
+      <div className="max-w-3xl mx-auto">
+        <div className="flex items-center justify-between mb-8 border-b border-slate-100 pb-4">
+          <h3 className="text-xl font-bold text-slate-800 flex items-center gap-2">
+            <ListOrdered size={20} className="text-indigo-600" />
+            Numbered Plain Text Outline
+          </h3>
+          <span className="text-xs font-black text-slate-400 uppercase tracking-widest hidden sm:inline">
+            AI Studio Optimized
+          </span>
+        </div>
+        <div className="relative group">
+          <pre className="whitespace-pre-wrap font-mono text-slate-700 leading-relaxed bg-gradient-to-br from-white to-slate-50 border border-slate-200 p-8 md:p-12 rounded-3xl shadow-sm overflow-auto max-h-[700px] text-sm md:text-base selection:bg-indigo-100">
+            {outline}
+          </pre>
+        </div>
+        <p className="mt-6 text-sm text-slate-400 italic text-center">
+          Numbered format (1., 1.1, 1.1.1) provides clear hierarchical structure for any text-based AI tool.
+        </p>
+      </div>
+    );
+  };
+
+  // Render visual mindmap - 移除文字標籤，只用顏色區分
+  const renderVisualMindmap = () => {
+    return (
+      <div className="min-w-fit">
+        {/* Root Node - 紫色 */}
+        <div className="mb-12">
+          <div className={`
+            inline-flex items-center gap-4 
+            ${COLORS.root.bg} ${COLORS.root.border} ${COLORS.root.text} ${COLORS.root.shadow}
+            p-6 px-10 rounded-3xl border-4 shadow-2xl relative z-10 
+            font-black text-2xl tracking-tight
+          `}>
+            <Network size={28} className="opacity-80" />
+            <div>{root.label}</div>
+          </div>
+        </div>
+
+        {/* Branches */}
+        <div className="flex flex-col gap-8">
+          {root.children?.map((child, idx) => (
+            <div key={idx} className="relative">
+              <div className="absolute -left-12 top-0 bottom-0 w-px bg-slate-200 last:h-0" />
+              <TreeBranch
+                node={child}
+                depth={1}
+                isLast={idx === root.children!.length - 1}
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    );
   };
 
   return (
@@ -149,35 +324,48 @@ const MindmapView: React.FC<MindmapViewProps> = ({ root }) => {
             <div className="w-10 h-10 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center">
               <Share2 size={24} />
             </div>
-            <h2 className="text-3xl font-bold text-slate-800 tracking-tight">Mindmap</h2>
+            <h2 className="text-3xl font-bold text-slate-800 tracking-tight">Mindmap Studio</h2>
           </div>
-          <p className="text-slate-500 ml-1">Hierarchical visualization of key categories and details</p>
+          <p className="text-slate-500 ml-1">Choose your preferred format: Visual, Numbered, or Mermaid</p>
         </div>
-        
+
         <div className="flex flex-col items-start md:items-end gap-3 w-full md:w-auto">
           <div className="flex bg-slate-100 p-1 rounded-xl w-full md:w-auto overflow-x-auto print:hidden">
-            <button 
+            <button
               onClick={() => setActiveMode('visual')}
-              className={`flex-none flex items-center justify-center gap-2 px-4 py-2 rounded-lg text-sm font-bold transition-all ${activeMode === 'visual' ? 'bg-white text-indigo-600 shadow-sm' : 'text-slate-500 hover:text-slate-700'}`}
+              className={`flex-none flex items-center justify-center gap-2 px-4 py-2 rounded-lg text-sm font-bold transition-all ${
+                activeMode === 'visual' 
+                  ? 'bg-white text-indigo-600 shadow-sm' 
+                  : 'text-slate-500 hover:text-slate-700'
+              }`}
             >
               <Eye size={16} /> Visual
             </button>
-            <button 
+            <button
               onClick={() => setActiveMode('numbered')}
-              className={`flex-none flex items-center justify-center gap-2 px-4 py-2 rounded-lg text-sm font-bold transition-all ${activeMode === 'numbered' ? 'bg-white text-indigo-600 shadow-sm' : 'text-slate-500 hover:text-slate-700'}`}
+              className={`flex-none flex items-center justify-center gap-2 px-4 py-2 rounded-lg text-sm font-bold transition-all ${
+                activeMode === 'numbered' 
+                  ? 'bg-white text-indigo-600 shadow-sm' 
+                  : 'text-slate-500 hover:text-slate-700'
+              }`}
             >
               <ListOrdered size={16} /> Numbered
             </button>
-            <button 
+            <button
               onClick={() => setActiveMode('mermaid')}
-              className={`flex-none flex items-center justify-center gap-2 px-4 py-2 rounded-lg text-sm font-bold transition-all ${activeMode === 'mermaid' ? 'bg-white text-indigo-600 shadow-sm' : 'text-slate-500 hover:text-slate-700'}`}
+              className={`flex-none flex items-center justify-center gap-2 px-4 py-2 rounded-lg text-sm font-bold transition-all ${
+                activeMode === 'mermaid' 
+                  ? 'bg-white text-indigo-600 shadow-sm' 
+                  : 'text-slate-500 hover:text-slate-700'
+              }`}
             >
               <Code size={16} /> Mermaid
             </button>
           </div>
+
           <div className="flex gap-3 w-full md:w-auto">
             {activeMode !== 'visual' && (
-              <button 
+              <button
                 onClick={copyToClipboard}
                 className="flex-1 md:flex-none flex items-center justify-center gap-2 px-5 py-2.5 bg-indigo-50 text-indigo-600 border border-indigo-100 rounded-xl hover:bg-indigo-100 transition-all text-sm font-bold shadow-sm"
               >
@@ -185,12 +373,12 @@ const MindmapView: React.FC<MindmapViewProps> = ({ root }) => {
                 {copied ? 'Copied!' : 'Copy Text'}
               </button>
             )}
-            <button 
+            <button
               onClick={activeMode === 'visual' ? () => window.print() : downloadText}
               className="flex-1 md:flex-none flex items-center justify-center gap-2 px-5 py-2.5 bg-white text-slate-700 border border-slate-200 rounded-xl hover:bg-slate-50 transition-all text-sm font-bold shadow-sm print:hidden"
             >
               <Download size={18} />
-              {activeMode === 'visual' ? 'Export PDF' : 'Download File'}
+              {activeMode === 'visual' ? 'Export PDF' : `Download .${activeMode === 'mermaid' ? 'mmd' : 'txt'}`}
             </button>
           </div>
         </div>
@@ -198,62 +386,11 @@ const MindmapView: React.FC<MindmapViewProps> = ({ root }) => {
 
       <div className="bg-white rounded-[2.5rem] p-8 md:p-16 min-h-[600px] border border-slate-200 shadow-sm overflow-x-auto print:shadow-none print:border-none">
         {root && root.label ? (
-          activeMode === 'visual' ? (
-            <div className="min-w-fit">
-              <div className="mb-12">
-                 <div className="inline-flex items-center gap-4 bg-indigo-600 text-white p-6 px-10 rounded-3xl border-4 border-indigo-700 shadow-2xl relative z-10 font-black text-2xl tracking-tight">
-                  <Network size={28} className="opacity-80" />
-                  <div>
-                    {root.label}
-                    <div className="text-[10px] bg-white/20 px-2 py-0.5 rounded mt-1 font-black uppercase tracking-widest text-white/90">Main Topic (Root)</div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex flex-col gap-8">
-                {root.children?.map((child, idx) => (
-                  <div key={idx} className="relative">
-                    <div className="absolute -left-12 top-0 bottom-0 w-px bg-slate-100 last:h-0" />
-                    <TreeBranch 
-                      node={child} 
-                      depth={1} 
-                      isLast={idx === root.children!.length - 1} 
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-          ) : activeMode === 'numbered' ? (
-            <div className="max-w-3xl mx-auto">
-              <div className="flex items-center justify-between mb-8 border-b border-slate-100 pb-4">
-                <h3 className="text-xl font-bold text-slate-800">Numbered Plain Text Outline</h3>
-                <span className="text-xs font-black text-slate-400 uppercase tracking-widest hidden sm:inline">AI Studio Optimized</span>
-              </div>
-              <div className="relative group">
-                <pre className="whitespace-pre-wrap font-mono text-slate-700 leading-relaxed bg-white border border-slate-200 p-8 md:p-12 rounded-3xl shadow-sm overflow-auto max-h-[700px] text-sm md:text-base selection:bg-indigo-100">
-                  {generateNumberedOutline(root)}
-                </pre>
-              </div>
-              <p className="mt-6 text-sm text-slate-400 italic text-center">
-                Numbered format (1., 1.1) provides the cleanest hierarchical rendering for plain-text AI prompts.
-              </p>
-            </div>
-          ) : (
-            <div className="max-w-3xl mx-auto">
-              <div className="flex items-center justify-between mb-8 border-b border-slate-100 pb-4">
-                <h3 className="text-xl font-bold text-slate-800">Mermaid.js Mindmap Code</h3>
-                <span className="text-xs font-black text-slate-400 uppercase tracking-widest hidden sm:inline">Diagram Code</span>
-              </div>
-              <div className="relative group">
-                <pre className="whitespace-pre-wrap font-mono text-indigo-100 leading-relaxed bg-indigo-950 p-8 md:p-12 rounded-3xl shadow-2xl overflow-auto max-h-[700px] text-sm md:text-base selection:bg-white/20">
-                  {generateMermaidCode(root)}
-                </pre>
-              </div>
-              <p className="mt-6 text-sm text-slate-400 italic text-center">
-                Copy this code and paste it into Google AI Studio to render the diagram.
-              </p>
-            </div>
-          )
+          <>
+            {activeMode === 'visual' && renderVisualMindmap()}
+            {activeMode === 'numbered' && renderNumberedOutline()}
+            {activeMode === 'mermaid' && renderMermaidPreview()}
+          </>
         ) : (
           <div className="flex flex-col items-center justify-center h-96 text-slate-400">
             <div className="w-24 h-24 bg-slate-50 rounded-full flex items-center justify-center mb-6">
@@ -267,24 +404,27 @@ const MindmapView: React.FC<MindmapViewProps> = ({ root }) => {
         )}
       </div>
 
-      <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4 print:hidden">
-        <div className="flex items-center gap-3 px-4 py-3 bg-white border border-slate-200 rounded-2xl shadow-sm">
-          <div className="w-3 h-3 rounded-full bg-indigo-600 ring-4 ring-indigo-50" />
-          <span className="text-[10px] font-black text-slate-500 uppercase tracking-widest">Main Topic</span>
+      {/* 顏色圖例 - 用顏色區分*/}
+      {activeMode === 'visual' && (
+        <div className="mt-10 flex flex-wrap justify-center gap-6 print:hidden">
+          <div className="flex items-center gap-3 px-4 py-2 bg-white border border-slate-200 rounded-full shadow-sm">
+            <div className="w-4 h-4 rounded-full bg-purple-600 ring-4 ring-purple-50" />
+            <span className="text-xs font-bold text-slate-600">Root</span>
+          </div>
+          <div className="flex items-center gap-3 px-4 py-2 bg-white border border-slate-200 rounded-full shadow-sm">
+            <div className="w-4 h-4 rounded-full bg-blue-500 ring-4 ring-blue-50" />
+            <span className="text-xs font-bold text-slate-600">Main Branch</span>
+          </div>
+          <div className="flex items-center gap-3 px-4 py-2 bg-white border border-slate-200 rounded-full shadow-sm">
+            <div className="w-4 h-4 rounded-full bg-emerald-500 ring-4 ring-emerald-50" />
+            <span className="text-xs font-bold text-slate-600">Sub-branch</span>
+          </div>
+          <div className="flex items-center gap-3 px-4 py-2 bg-white border border-slate-200 rounded-full shadow-sm">
+            <div className="w-4 h-4 rounded-full bg-amber-500 ring-4 ring-amber-50" />
+            <span className="text-xs font-bold text-slate-600">Detail</span>
+          </div>
         </div>
-        <div className="flex items-center gap-3 px-4 py-3 bg-white border border-slate-200 rounded-2xl shadow-sm">
-          <div className="w-3 h-3 rounded-full bg-white border border-indigo-200 ring-4 ring-indigo-50" />
-          <span className="text-[10px] font-black text-slate-500 uppercase tracking-widest">Branch</span>
-        </div>
-        <div className="flex items-center gap-3 px-4 py-3 bg-white border border-slate-200 rounded-2xl shadow-sm">
-          <div className="w-3 h-3 rounded-full bg-slate-200 ring-4 ring-slate-50" />
-          <span className="text-[10px] font-black text-slate-500 uppercase tracking-widest">Sub-branch</span>
-        </div>
-        <div className="flex items-center gap-3 px-4 py-3 bg-white border border-slate-200 rounded-2xl shadow-sm">
-          <div className="w-3 h-3 rounded-full bg-emerald-500 ring-4 ring-emerald-50" />
-          <span className="text-[10px] font-black text-slate-500 uppercase tracking-widest">Detail</span>
-        </div>
-      </div>
+      )}
     </div>
   );
 };
