@@ -2,12 +2,12 @@
 
 import { StudySession, StudyStyle, Flashcard, QuizQuestion, MindmapNode } from "../types";
 
-const API_BASE_URL = 'https://api.chatanywhere.tech/v1'; // 或你使用的其他URL
-const MODEL = 'deepseek-r1'; // 或你使用的其他模型
+const API_BASE_URL = 'https://api.chatanywhere.tech/v1'; // Or other URLs you use
+const MODEL = 'deepseek-r1'; // Or other LLM models you use
 
 const safeParse = (text: string, fallback: any) => {
   try {
-    // 移除 markdown 代碼塊
+    // Remove markdown code blocks
     const cleanText = text.replace(/```json\n?/, '').replace(/\n?```/, '').trim();
     return JSON.parse(cleanText);
   } catch (e) {
@@ -145,10 +145,9 @@ Return in this JSON format:
     console.warn("Mindmap generation failed", e);
   }
 
-  // STEP 3: Engagement (Flashcards + Quiz) - 強化版，確保生成正確數量
+  // STEP 3: Engagement (Flashcards + Quiz)
   let engagementData = { flashcards: [], quiz: [] };
   try {
-    // 更嚴格的提示詞，明確要求數量
     const engagementPrompt = `You MUST generate EXACTLY ${flashcardCount} flashcards and EXACTLY ${quizCount} quiz questions from this material.
 This is a strict requirement - no more, no less.
 
@@ -193,11 +192,11 @@ Return in this EXACT JSON format:
 
     const parsedEngagement = safeParse(engagementResponse, { flashcards: [], quiz: [] });
 
-    // 後處理：確保數量正確
+    // Post-processing: Ensure correct quantity
     let flashcards = parsedEngagement.flashcards || [];
     let quiz = parsedEngagement.quiz || [];
 
-    // 如果數量不足，用生成的內容填充
+    // Fill it with the generated content if the quantity is insufficient 
     if (flashcards.length < flashcardCount) {
       console.warn(`Flashcards count mismatch: expected ${flashcardCount}, got ${flashcards.length}. Duplicating to fill.`);
       const originalLength = flashcards.length;
@@ -211,12 +210,11 @@ Return in this EXACT JSON format:
       }
     }
 
-    // 如果數量過多，截斷
+    // Slice if the quantity is too large
     if (flashcards.length > flashcardCount) {
       flashcards = flashcards.slice(0, flashcardCount);
     }
 
-    // 同樣處理 quiz
     if (quiz.length < quizCount) {
       console.warn(`Quiz count mismatch: expected ${quizCount}, got ${quiz.length}. Duplicating to fill.`);
       const originalLength = quiz.length;
@@ -241,7 +239,7 @@ Return in this EXACT JSON format:
 
   } catch (e) {
     console.error("Engagement content failed to generate", e);
-    // 如果完全失敗，生成一些基本內容
+    // Generate some basic content if it fails completely
     engagementData = generateFallbackContent(textContext, flashcardCount, quizCount);
   }
 
@@ -258,7 +256,7 @@ Return in this EXACT JSON format:
   };
 }
 
-// 備用生成函數 - 當 API 完全失敗時使用
+// Alternate generation function - Use when the API fails completely
 function generateFallbackContent(text: string, flashcardCount: number, quizCount: number) {
   return {
     flashcards: generateFallbackFlashcards(flashcardCount),
