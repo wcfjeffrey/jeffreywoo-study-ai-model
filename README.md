@@ -29,7 +29,7 @@ Disclaimer: This app provides AI‑driven insights for educational purposes only
 
 1. Install dependencies:
    `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) file to your Gemini API key after you create [.env.local](.env.local) file
+2. Set the `VITE_API_KEY` in [.env](.env) file to your API key after you create [.env](.env) file
 3. Run the app:
    `npm run dev`
 
