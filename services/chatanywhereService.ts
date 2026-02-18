@@ -2,7 +2,7 @@
 
 import { StudySession, StudyStyle, Flashcard, QuizQuestion, MindmapNode } from "../types";
 
-const API_BASE_URL = 'https://api.chatanywhere.tech/v1';
+const API_BASE_URL = 'https://api.chatanywhere.tech/v1'; // 或你使用的其他URL
 const MODEL = 'deepseek-r1'; // 或你使用的其他模型
 
 const safeParse = (text: string, fallback: any) => {
