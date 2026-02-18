@@ -11,7 +11,7 @@ Not your typical study app!
 - 🧠 **Evidence‑Based Learning** — built on active recall and spaced repetition to maximize retention  
 - 🎙️ **AI Tutor Mode** — ask questions, get clear explanations, and test your knowledge instantly  
 - 🌍 **Multilingual Support** — study in multiple languages with accurate understanding and translation  
-- 🔗 **Seamless Export** — send your study sets to Anki, Quizlet, or save them as notes and mindmaps (visual, numbered, mermaid) 
+- 🔗 **Seamless Export** — save study sets as notes and mindmaps (visual, numbered, mermaid) 
 
 ## 🚀 Why Choose JeffreyWooStudy
 Most apps just digitize your notes. **JeffreyWooStudy** goes further — embedding AI into your study workflow so you can learn smarter, retain more, and feel confident faster. Every feature is designed to align with how the human brain learns best.
