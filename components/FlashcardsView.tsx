@@ -18,8 +18,6 @@ const formatClozeText = (text: string): { displayText: string; answer: string } 
 
   // 獲取第一個匹配的答案
   const answer = matches[0][1];
-
-  // 將所有 [內容] 替換為底線 (________)
   const displayText = text.replace(regex, ' __________ ');
 
   return { displayText, answer };
