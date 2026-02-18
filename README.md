@@ -45,7 +45,7 @@ Disclaimer: This app provides AI‑driven insights for educational purposes only
 <img src="assets/JeffreyWooStudy6.png" alt="JeffreyWooStudy6" width="1200" height="900" />
 <img src="assets/JeffreyWooStudy6A.png" alt="JeffreyWooStudy6A" width="1200" height="900" />
 <img src="assets/JeffreyWooStudy7.png" alt="JeffreyWooStudy7" width="1200" height="900" />
-<img src="assets/JeffreyWooStudy8.png" alt="JeffreyWooStudy8" width="1200" height="900" />
+<img src="assets/JeffreyWooStudy8.png" alt="JeffreyWooStudy8" width="1200" height="2800" />
 <img src="assets/JeffreyWooStudy9.png" alt="JeffreyWooStudy9" width="1200" height="900" />
 <img src="assets/JeffreyWooStudy10.png" alt="JeffreyWooStudy10" width="1200" height="900" />
 <img src="assets/JeffreyWooStudy11.png" alt="JeffreyWooStudy11" width="1200" height="900" />
