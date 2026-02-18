@@ -7,7 +7,7 @@ Not your typical study app!
 **JeffreyWooStudy** is an AI-powered learning assistant that helps you cut study time in half by turning your materials into personalized flashcards, quizzes, and study guides.
 
 ## ✨ What It Does
-- 📄 **Instant Conversion** — upload your notes (.txt) or take your photos/screenshots for your notes, and get AI‑generated flashcards, summaries, and practice questions  
+- 📄 **Instant Conversion** — upload your study materials (.txt) or your photos/screenshots for your notes, and get AI‑generated flashcards, summaries, and practice questions  
 - 🧠 **Evidence‑Based Learning** — built on active recall and spaced repetition to maximize retention  
 - 🎙️ **AI Tutor Mode** — ask questions, get clear explanations, and test your knowledge instantly  
 - 🌍 **Multilingual Support** — study in multiple languages with accurate understanding and translation  
@@ -17,7 +17,7 @@ Not your typical study app!
 Most apps just digitize your notes. **JeffreyWooStudy** goes further — embedding AI into your study workflow so you can learn smarter, retain more, and feel confident faster. Every feature is designed to align with how the human brain learns best.
 
 ## 📦 Getting Started
-1. Upload your study materials (PDFs, slides, notes, or videos).  
+1. Upload your study materials (.txt) or photos/screenshots for your notes.  
 2. Let **JeffreyWooStudy** transform them into personalized study tracks.  
 3. Review, recall, and retain with AI‑powered flashcards, quizzes, and guides.  
 
