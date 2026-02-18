@@ -19,7 +19,7 @@ Most apps just digitize your notes. **JeffreyWooStudy** goes further — embeddi
 ## 📦 Getting Started
 1. Upload your study materials (.txt) or photos/screenshots for your notes.  
 2. Let **JeffreyWooStudy** transform them into personalized study tracks.  
-3. Review, recall, and retain with AI‑powered flashcards, quizzes, and guides.  
+3. Review, recall, and retain with AI‑powered flashcards, quizzes, study guides, and mindmaps.  
 
 Disclaimer: This app provides AI‑driven insights for educational purposes only. It does not replace professional academic instruction.
 
