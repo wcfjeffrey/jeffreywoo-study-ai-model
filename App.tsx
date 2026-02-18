@@ -7,7 +7,7 @@ import QuizView from './components/QuizView';
 import MindmapView from './components/MindmapView';
 import TutorView from './components/TutorView';
 import { StudySession, ViewState, StudyStyle } from './types';
-import { processStudyMaterial } from './services/geminiService';
+import { processStudyMaterial } from './services/chatanywhereService.ts';
 // Added ChevronRight to imports to fix missing symbol errors
 import { Upload, FileType, Languages, LayoutTemplate, BrainCircuit, Rocket, Loader2, Sparkles, AlertCircle, Bookmark, ChevronRight, Layers, HelpCircle } from 'lucide-react';
 // @ts-ignore
