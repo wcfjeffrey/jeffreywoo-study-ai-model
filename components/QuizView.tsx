@@ -13,7 +13,6 @@ const QuizView: React.FC<QuizViewProps> = ({ questions }) => {
   const [score, setScore] = useState(0);
   const [completed, setCompleted] = useState<string[]>([]);
 
-  // 如果沒有問題，顯示提示
   if (!questions || questions.length === 0) {
     return (
       <div className="max-w-4xl mx-auto py-20 px-6 text-center">
