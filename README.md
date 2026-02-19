@@ -22,7 +22,7 @@ Most apps just digitize your notes. **JeffreyWooStudy** goes further — embeddi
 3. Review, recall, and retain with AI‑powered flashcards, quizzes, study guides, and mindmaps.  
 
 ## ⚖️ Disclaimer
-This app provides AI‑driven insights for educational purposes only. It does not replace professional academic instruction.
+**JeffreyWooStudy** provides AI‑driven insights for educational purposes only. It does not replace professional academic instruction.
 
 ## ⚙️ Run Locally
 
