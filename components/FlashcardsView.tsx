@@ -6,7 +6,6 @@ interface FlashcardsViewProps {
   cards: Flashcard[];
 }
 
-// 處理 cloze 文本，將 [word] 轉換為底線
 const formatClozeText = (text: string): { displayText: string; answer: string } => {
   // 匹配 [任何內容] 的模式
   const regex = /\[(.*?)\]/g;
@@ -16,7 +15,6 @@ const formatClozeText = (text: string): { displayText: string; answer: string } 
     return { displayText: text, answer: '' };
   }
 
-  // 獲取第一個匹配的答案
   const answer = matches[0][1];
   const displayText = text.replace(regex, ' __________ ');
 
@@ -27,7 +25,6 @@ const FlashcardsView: React.FC<FlashcardsViewProps> = ({ cards }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
 
-  // 如果沒有卡片，顯示提示
   if (!cards || cards.length === 0) {
     return (
       <div className="max-w-4xl mx-auto py-20 px-6 text-center">
@@ -42,7 +39,6 @@ const FlashcardsView: React.FC<FlashcardsViewProps> = ({ cards }) => {
 
   const currentCard = cards[currentIndex];
 
-  // 根據卡片類型處理顯示內容
   const getFrontContent = () => {
     if (currentCard.type === 'cloze') {
       const { displayText } = formatClozeText(currentCard.front);
@@ -69,7 +65,6 @@ const FlashcardsView: React.FC<FlashcardsViewProps> = ({ cards }) => {
     setIsFlipped(false);
   };
 
-  // 獲取卡片類型標籤
   const getTypeLabel = (type: string) => {
     switch(type) {
       case 'qa': return 'Q&A';
@@ -79,7 +74,6 @@ const FlashcardsView: React.FC<FlashcardsViewProps> = ({ cards }) => {
     }
   };
 
-  // 獲取卡片類型顏色
   const getTypeColor = (type: string) => {
     switch(type) {
       case 'qa': return 'bg-blue-100 text-blue-600';
@@ -114,11 +108,11 @@ const FlashcardsView: React.FC<FlashcardsViewProps> = ({ cards }) => {
           <div className="backface-hidden absolute inset-0 bg-white rounded-3xl p-12 flex flex-col items-center justify-center border-2 border-indigo-100 shadow-xl">
             <span className="text-sm font-bold text-indigo-600 mb-4">FRONT</span>
 
-            {/* 卡片正面內容 */}
+            {/* Card front content */}
             <div className="text-2xl font-bold text-slate-800 text-center">
               {currentCard.type === 'cloze' ? (
                 <div>
-                  {/* 將文本分段顯示，保持底線格式 */}
+                  {/* Display the text in fragments, maintaining underline formatting */}
                   {getFrontContent().split('*__________*').map((part, index, array) => (
                     <React.Fragment key={index}>
                       {part}
@@ -133,7 +127,7 @@ const FlashcardsView: React.FC<FlashcardsViewProps> = ({ cards }) => {
               )}
             </div>
 
-            {/* MCQ 選項 */}
+            {/* MCQ options */}
             {currentCard.type === 'mcq' && currentCard.options && (
               <div className="mt-6 space-y-2 w-full max-w-md">
                 {currentCard.options.map((opt, idx) => (
@@ -147,7 +141,7 @@ const FlashcardsView: React.FC<FlashcardsViewProps> = ({ cards }) => {
               </div>
             )}
 
-            {/* 提示用戶點擊翻轉 */}
+            {/* Prompt user to click to flip */}
             <div className="absolute bottom-4 left-0 right-0 text-center">
               <span className="text-xs text-slate-400">Click to flip</span>
             </div>
@@ -157,7 +151,7 @@ const FlashcardsView: React.FC<FlashcardsViewProps> = ({ cards }) => {
           <div className="absolute inset-0 backface-hidden rotate-y-180 bg-indigo-600 rounded-3xl p-12 flex flex-col items-center justify-center border-2 border-indigo-700 shadow-xl">
             <span className="text-sm font-bold text-indigo-200 mb-4">BACK</span>
 
-            {/* 卡片背面內容 */}
+            {/* Contents on back of card */}
             <div className="text-2xl font-bold text-white text-center">
               {currentCard.type === 'cloze' ? (
                 <div>
@@ -170,7 +164,7 @@ const FlashcardsView: React.FC<FlashcardsViewProps> = ({ cards }) => {
               )}
             </div>
 
-            {/* MCQ 顯示正確答案 */}
+            {/* MCQ showing correct answer */}
             {currentCard.type === 'mcq' && (
               <div className="mt-6 p-4 bg-indigo-500 rounded-xl">
                 <p className="text-white/80 text-sm mb-1">Correct Answer:</p>
@@ -178,7 +172,7 @@ const FlashcardsView: React.FC<FlashcardsViewProps> = ({ cards }) => {
               </div>
             )}
 
-            {/* 提示用戶點擊翻轉 */}
+            {/* Prompt user to click to flip back */}
             <div className="absolute bottom-4 left-0 right-0 text-center">
               <span className="text-xs text-indigo-200">Click to flip back</span>
             </div>
@@ -211,7 +205,7 @@ const FlashcardsView: React.FC<FlashcardsViewProps> = ({ cards }) => {
         </button>
       </div>
 
-      {/* 卡片計數器 */}
+      {/* Card counter */}
       <div className="mt-8 flex justify-center gap-2">
         {cards.map((_, idx) => (
           <button
