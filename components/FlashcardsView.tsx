@@ -7,7 +7,6 @@ interface FlashcardsViewProps {
 }
 
 const formatClozeText = (text: string): { displayText: string; answer: string } => {
-  // 匹配 [任何內容] 的模式
   const regex = /\[(.*?)\]/g;
   const matches = [...text.matchAll(regex)];
 
