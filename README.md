@@ -50,7 +50,7 @@ This project demonstrates how innovation can reshape education & staff talent de
 
 1. Install dependencies:
    `npm install`
-2. Set the `VITE_API_KEY` in [.env](.env) file to your ChatAnywhere API key after you create [.env](.env) file
+2. Set the `VITE_API_KEY` in [.env](.env) file after you create [.env](.env) file
 3. Run the app:
    `npm run dev`
 
