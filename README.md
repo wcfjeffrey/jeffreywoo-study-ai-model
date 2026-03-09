@@ -22,6 +22,15 @@ Most apps just digitize your notes. **JeffreyWooStudy** goes further — embeddi
 - **UI** — Standard React components, styled via TSX
 - **Runtime** — Node.js
 
+## ✏️ Learning Theories Applied
+- **Spaced Repetition Theory** — The app schedules flashcards based on the Ebbinghaus Forgetting Curve, ensuring learners review material at optimal intervals to strengthen memory consolidation.
+- **Active Recall Principle** — Quizzes are designed to force retrieval practice, a method proven to enhance long-term retention compared to passive review.
+- **Constructivist Learning Theory** — Learners build knowledge progressively; the app scaffolds questions from simple recall to complex application, mirroring Vygotsky’s “Zone of Proximal Development.”
+- **Bloom’s Taxonomy** — Question generation spans multiple cognitive levels: remembering, understanding, applying, analyzing, and evaluating, ensuring comprehensive skill development.
+- **Metacognition & Self-Regulated Learning** — The app provides feedback loops, encouraging learners to reflect on their performance and adjust study strategies.
+- **Dual Coding Theory** — Flashcards combine text with visuals, leveraging both verbal and non-verbal channels to improve comprehension and recall.
+- **Cognitive Load Theory** — Content is chunked into manageable units, preventing overload and maximizing working memory efficiency.
+
 ## 💡Finance Transformation Impact
 This project demonstrates how innovation can reshape education & staff talent development by:  
 • Digitizing learning workflows with AI‑powered tutoring & personalized study paths for accounting/audit standards or tax regulations, etc.  
