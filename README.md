@@ -23,6 +23,7 @@ Most apps just digitize your notes. **JeffreyWooStudy** goes further — embeddi
 - **Runtime** — Node.js
 
 ## ✏️ Learning Theories Applied
+This app integrates learning science theories into AI-driven flashcards and quizzes. It adapts to learner progress, reinforcing knowledge retention and promoting long-term mastery.
 - **Spaced Repetition Theory** — The app schedules flashcards based on the Ebbinghaus Forgetting Curve, ensuring learners review material at optimal intervals to strengthen memory consolidation.
 - **Active Recall Principle** — Quizzes are designed to force retrieval practice, a method proven to enhance long-term retention compared to passive review.
 - **Constructivist Learning Theory** — Learners build knowledge progressively; the app scaffolds questions from simple recall to complex application, mirroring Vygotsky’s “Zone of Proximal Development.”
