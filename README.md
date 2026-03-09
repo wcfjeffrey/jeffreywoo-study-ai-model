@@ -23,13 +23,13 @@ Most apps just digitize your notes. **JeffreyWooStudy** goes further — embeddi
 - **Runtime** — Node.js
 
 ## ✏️ Learning Theories Applied
-This app integrates learning science theories into AI-driven flashcards and quizzes. It adapts to learner progress, reinforcing knowledge retention and promoting long-term mastery.
-- **Spaced Repetition Theory** — The app schedules flashcards based on the Ebbinghaus Forgetting Curve, ensuring learners review material at optimal intervals to strengthen memory consolidation.
-- **Active Recall Principle** — Quizzes are designed to force retrieval practice, a method proven to enhance long-term retention compared to passive review.
-- **Constructivist Learning Theory** — Learners build knowledge progressively; the app scaffolds questions from simple recall to complex application, mirroring Vygotsky’s “Zone of Proximal Development.”
-- **Bloom’s Taxonomy** — Question generation spans multiple cognitive levels: remembering, understanding, applying, analyzing, and evaluating, ensuring comprehensive skill development.
-- **Metacognition & Self-Regulated Learning** — The app provides feedback loops, encouraging learners to reflect on their performance and adjust study strategies.
-- **Dual Coding Theory** — Flashcards combine text with visuals, leveraging both verbal and non-verbal channels to improve comprehension and recall.
+This app integrates learning science theories into AI-driven flashcards and quizzes. It adapts to learner progress, reinforcing knowledge retention and promoting long-term mastery:  
+- **Spaced Repetition Theory** — The app schedules flashcards based on the Ebbinghaus Forgetting Curve, ensuring learners review material at optimal intervals to strengthen memory consolidation.  
+- **Active Recall Principle** — Quizzes are designed to force retrieval practice, a method proven to enhance long-term retention compared to passive review.  
+- **Constructivist Learning Theory** — Learners build knowledge progressively; the app scaffolds questions from simple recall to complex application, mirroring Vygotsky’s “Zone of Proximal Development.”  
+- **Bloom’s Taxonomy** — Question generation spans multiple cognitive levels: remembering, understanding, applying, analyzing, and evaluating, ensuring comprehensive skill development.  
+- **Metacognition & Self-Regulated Learning** — The app provides feedback loops, encouraging learners to reflect on their performance and adjust study strategies.  
+- **Dual Coding Theory** — Flashcards combine text with visuals, leveraging both verbal and non-verbal channels to improve comprehension and recall.  
 - **Cognitive Load Theory** — Content is chunked into manageable units, preventing overload and maximizing working memory efficiency.
 
 ## 💡Finance Transformation Impact
