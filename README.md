@@ -17,9 +17,10 @@ Not your typical study app!
 Most apps just digitize your notes. **JeffreyWooStudy** goes further — embedding AI into your study workflow so you can learn smarter, retain more, and feel confident faster. Every feature is designed to align with how the human brain learns best.
 
 ## 🤖 Tech Stack
-- **Language** — TypeScript  
+- **Language** — TypeScript, HTML  
 - **Framework** — React (with Vite as the build tool)  
-- **UI** — Standard React components
+- **UI** — Standard React components, styled via TSX
+- **Runtime** — Node.js
 
 ## 💡Finance Transformation Impact
 This project demonstrates how innovation can reshape education & staff talent development by:  
