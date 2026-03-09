@@ -34,18 +34,18 @@ This app integrates learning science theories into AI-driven flashcards and quiz
 
 ## 💡Finance Transformation Impact
 This project demonstrates how innovation can reshape education & staff talent development by:  
-• Digitizing learning workflows with AI‑powered tutoring & personalized study paths for accounting/audit standards or tax regulations, etc.  
-• Enhancing adaptability & productivity through interactive dashboards & tailored insights that support audit readiness & financial analysis.  
-• Driving organizational transformation by enabling scalable upskilling for finance students/staff, accountants, auditors & tax advisers.  
-• Improving engagement & retention with interactive tools such as flashcards, quizzes, explanations & mindmaps tailored to accounting, tax or other studies.  
-• Promoting responsible innovation with secure handling of sensitive study data & compliance-aligned learning environments.
+- Digitizing learning workflows with AI‑powered tutoring & personalized study paths for accounting/audit standards or tax regulations, etc.  
+- Enhancing adaptability & productivity through interactive dashboards & tailored insights that support audit readiness & financial analysis.  
+- Driving organizational transformation by enabling scalable upskilling for finance students/staff, accountants, auditors & tax advisers.  
+- Improving engagement & retention with interactive tools such as flashcards, quizzes, explanations & mindmaps tailored to accounting, tax or other studies.  
+- Promoting responsible innovation with secure handling of sensitive study data & compliance-aligned learning environments.
 
 ## ⭐ Finance Skills Strengthened
-• Full‑stack architecture for AI‑driven financial learning applications.  
-• Secure handling of sensitive study data aligned with audit standards.  
-• AI model integration into education workflows (flashcards, quizzes, explanations & mindmaps).  
-• File parsing & structured data transformation for financial insights.  
-• Interactive dashboards with React (TypeScript + Vite) to visualize learning progress in finance.
+- Full‑stack architecture for AI‑driven financial learning applications.  
+- Secure handling of sensitive study data aligned with audit standards.  
+- AI model integration into education workflows (flashcards, quizzes, explanations & mindmaps).  
+- File parsing & structured data transformation for financial insights.  
+- Interactive dashboards with React (TypeScript + Vite) to visualize learning progress in finance.
 
 ## 📦 Getting Started
 1. Upload your study materials (.txt) or photos/screenshots for your notes.  
