@@ -33,12 +33,12 @@ This app integrates learning science theories into AI-driven flashcards and quiz
 - **Cognitive Load Theory** — Content is chunked into manageable units, preventing overload and maximizing working memory efficiency.
 
 ## 💡Finance Transformation Impact
-This project demonstrates how innovation can reshape education & staff talent development by:  
-- Digitizing learning workflows with AI‑powered tutoring & personalized study paths for accounting/audit standards or tax regulations, etc.  
-- Enhancing adaptability & productivity through interactive dashboards & tailored insights that support audit readiness & financial analysis.  
-- Driving organizational transformation by enabling scalable upskilling for finance students/staff, accountants, auditors & tax advisers.  
-- Improving engagement & retention with interactive tools such as flashcards, quizzes, explanations & mindmaps tailored to accounting, tax or other studies.  
-- Promoting responsible innovation with secure handling of sensitive study data & compliance-aligned learning environments.
+This project demonstrates how innovation can reshape education and staff talent development by:  
+- Digitizing finance learning workflows with AI‑driven tutoring and personalized study paths, enabling scalable mastery of accounting, audit, tax standards, etc.  
+- Enhancing staff adaptability and productivity through interactive dashboards & tailored insights that strengthen audit readiness and financial analysis capabilities.  
+- Driving organizational transformation by enabling scalable and AI‑powered upskilling for finance teams, accountants, auditors, and tax professionals.  
+- Improving learning engagement and retention with interactive tools such as flashcards, quizzes, explanations & mindmaps tailored to accounting, tax, and compliance training and other studies.  
+- Promoting responsible innovation by ensuring secure handling of learning data and maintaining compliance‑aligned and ethically designed training environments.
 
 ## ⭐ Finance Skills Strengthened
 - Full‑stack architecture for AI‑driven financial learning applications.  
