@@ -43,7 +43,7 @@ This project demonstrates how innovation can reshape education and staff talent 
 ## ⭐ Finance Skills Strengthened
 - Full‑stack architecture for AI‑driven financial learning applications.  
 - Secure handling of sensitive study data aligned with audit standards.  
-- AI model integration into education workflows (flashcards, quizzes, explanations & mindmaps).  
+- AI model integration into education workflows (flashcards, quizzes, explanations, and mindmaps).  
 - File parsing & structured data transformation for financial insights.  
 - Interactive dashboards with React (TypeScript + Vite) to visualize learning progress in finance.
 
