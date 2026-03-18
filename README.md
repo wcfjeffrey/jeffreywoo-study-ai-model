@@ -39,6 +39,7 @@ This project demonstrates how innovation can reshape education and staff talent 
 - Driving organizational transformation by enabling scalable and AI‑powered upskilling for finance teams, accountants, auditors, and tax professionals.  
 - Improving learning engagement and retention with interactive tools such as flashcards, quizzes, explanations & mindmaps tailored to accounting, tax, and compliance training and other studies.  
 - Promoting responsible innovation by ensuring secure handling of learning data and maintaining compliance‑aligned and ethically designed training environments.
+
 **Note:** When applying Bloom's Taxonomy to generate questions, it can target complex accounting standards such as 'Consolidated Financial Statements Preparation' or 'HKFRS 17 Insurance Contracts' by designing practice questions across different cognitive levels—from 'remembering' to 'evaluating'—to accelerate accounting professional mastery.
 
 ## ⭐ Finance Skills Strengthened
