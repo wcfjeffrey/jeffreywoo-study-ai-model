@@ -10,7 +10,7 @@
 ![Node.js](https://img.shields.io/badge/Node.js-6DA55F?logo=node.js&logoColor=white)
 ![Deepseek](https://custom-icon-badges.demolab.com/badge/Deepseek-4D6BFF?logo=deepseek&logoColor=fff)
 
-Not your typical study app!
+> **Not your typical study app!**
 
 **JeffreyWooStudy** is an AI-powered learning assistant that helps you cut study time in half by turning your materials into personalized flashcards, quizzes, study guides, and mindmaps. It combines intelligent tutoring, personalized learning paths, and interactive study support to enhance education and corporate training, and enables students and staff to upskill effectively, driving measurable improvements in study performance, adaptability, and workforce productivity.
 
