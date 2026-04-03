@@ -21,14 +21,18 @@
 - 🌍 **Multilingual Support** — study in multiple languages with accurate understanding and translation  
 - 🔗 **Seamless Export** — save study sets as notes and mindmaps (visual, numbered, mermaid) 
 
+## 💡Finance Transformation Impact
+This project demonstrates how innovation can reshape education and staff talent development by:  
+- Digitizing finance learning workflows with AI‑driven tutoring and personalized study paths, enabling scalable mastery of accounting, audit, tax standards, etc.  
+- Enhancing staff adaptability and productivity through interactive dashboards & tailored insights that strengthen audit readiness and financial analysis capabilities.  
+- Driving organizational transformation by enabling scalable and AI‑powered upskilling for finance teams, accountants, auditors, and tax professionals.  
+- Improving learning engagement and retention with interactive tools such as flashcards, quizzes, explanations & mindmaps tailored to accounting, tax, and compliance training and other studies.  
+- Promoting responsible innovation by ensuring secure handling of learning data and maintaining compliance‑aligned and ethically designed training environments.
+
+**Note:** When applying Bloom's Taxonomy to generate questions, it can target complex accounting standards such as 'Consolidated Financial Statements Preparation' or 'HKFRS 17 Insurance Contracts' by designing practice questions across different cognitive levels—from 'remembering' to 'evaluating'—to accelerate accounting professional mastery.
+
 ## 🚀 Why Choose JeffreyWooStudy
 Most apps just digitize your notes. **JeffreyWooStudy** goes further — embedding AI into your study workflow so you can learn smarter, retain more, and feel confident faster. Every feature is designed to align with how the human brain learns best.
-
-## 🤖 Tech Stack
-- **Language** — TypeScript, HTML  
-- **Framework** — React (with Vite as the build tool)  
-- **UI** — Standard React components, styled via TSX
-- **Runtime** — Node.js
 
 ## ✏️ Learning Theories Applied
 This app integrates learning science theories into AI-driven flashcards and quizzes. It adapts to learner progress, reinforcing knowledge retention and promoting long-term mastery:  
@@ -40,16 +44,6 @@ This app integrates learning science theories into AI-driven flashcards and quiz
 - **Dual Coding Theory** — Flashcards combine text with visuals, leveraging both verbal and non-verbal channels to improve comprehension and recall.  
 - **Cognitive Load Theory** — Content is chunked into manageable units, preventing overload and maximizing working memory efficiency.
 
-## 💡Finance Transformation Impact
-This project demonstrates how innovation can reshape education and staff talent development by:  
-- Digitizing finance learning workflows with AI‑driven tutoring and personalized study paths, enabling scalable mastery of accounting, audit, tax standards, etc.  
-- Enhancing staff adaptability and productivity through interactive dashboards & tailored insights that strengthen audit readiness and financial analysis capabilities.  
-- Driving organizational transformation by enabling scalable and AI‑powered upskilling for finance teams, accountants, auditors, and tax professionals.  
-- Improving learning engagement and retention with interactive tools such as flashcards, quizzes, explanations & mindmaps tailored to accounting, tax, and compliance training and other studies.  
-- Promoting responsible innovation by ensuring secure handling of learning data and maintaining compliance‑aligned and ethically designed training environments.
-
-**Note:** When applying Bloom's Taxonomy to generate questions, it can target complex accounting standards such as 'Consolidated Financial Statements Preparation' or 'HKFRS 17 Insurance Contracts' by designing practice questions across different cognitive levels—from 'remembering' to 'evaluating'—to accelerate accounting professional mastery.
-
 ## ⭐ Finance Skills Strengthened
 - Full‑stack architecture for AI‑driven financial learning applications.  
 - Secure handling of sensitive study data aligned with audit standards.  
@@ -57,19 +51,16 @@ This project demonstrates how innovation can reshape education and staff talent 
 - File parsing & structured data transformation for financial insights.  
 - Interactive dashboards with React (TypeScript + Vite) to visualize learning progress in finance.
 
+## 🤖 Tech Stack
+- **Language** — TypeScript, HTML  
+- **Framework** — React (with Vite as the build tool)  
+- **UI** — Standard React components, styled via TSX
+- **Runtime** — Node.js
+
 ## 📦 Getting Started
 1. Upload your study materials (.txt) or photos/screenshots for your notes.  
 2. Let **JeffreyWooStudy** transform them into personalized study tracks.  
 3. Review, recall, and retain with AI‑powered flashcards, quizzes, study guides, and mindmaps.  
-
-## ⚖️ Disclaimer
-**JeffreyWooStudy** provides AI‑driven insights for informational, educational, and demonstration purposes only. It does not constitute professional tutoring, academic advice, or guaranteed learning outcomes.
-
-AI‑generated explanations, answers, or study suggestions may contain errors, omissions, or inaccuracies. The model is not a substitute for qualified teachers, textbooks, or official course materials.
-
-Always verify critical information with trusted academic sources or instructors. The developer assumes no liability for any academic performance issues, misunderstandings, or other damages arising from the use of this software.
-
-Use at your own risk.
 
 ## ⚙️ Run Locally
 
@@ -98,3 +89,19 @@ Use at your own risk.
 <img src="assets/JeffreyWooStudy10.png" alt="JeffreyWooStudy10" width="1200" height="900" />
 <img src="assets/JeffreyWooStudy11.png" alt="JeffreyWooStudy11" width="1200" height="900" />
 <img src="assets/JeffreyWooStudy12.png" alt="JeffreyWooStudy12" width="1200" height="900" />
+
+## ⚖️ Disclaimer
+**JeffreyWooStudy** provides AI‑driven insights for informational, educational, and demonstration purposes only. It does not constitute professional tutoring, academic advice, or guaranteed learning outcomes.
+
+AI‑generated explanations, answers, or study suggestions may contain errors, omissions, or inaccuracies. The model is not a substitute for qualified teachers, textbooks, or official course materials.
+
+Always verify critical information with trusted academic sources or instructors. The developer assumes no liability for any academic performance issues, misunderstandings, or other damages arising from the use of this software.
+
+Use at your own risk.
+
+## 👤 About the Author
+Jeffrey Woo — Finance Manager | Strategic FP&A, AI Automation & Cost Optimization | MBA | FCCA | CTA | FTIHK | SAP Financial Accounting (FI) Certified Application Associate | Xero Advisor Certified
+
+📧 Email: jeffreywoocf@gmail.com  
+💼 LinkedIn: https://www.linkedin.com/in/wcfjeffrey/  
+🐙 GitHub: https://github.com/wcfjeffrey/
