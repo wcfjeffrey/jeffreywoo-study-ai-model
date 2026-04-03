@@ -63,7 +63,13 @@ This project demonstrates how innovation can reshape education and staff talent 
 3. Review, recall, and retain with AI‑powered flashcards, quizzes, study guides, and mindmaps.  
 
 ## ⚖️ Disclaimer
-**JeffreyWooStudy** provides AI‑driven insights for educational purposes only. It does not replace professional academic instruction.
+**JeffreyWooStudy** provides AI‑driven insights for informational, educational, and demonstration purposes only. It does not constitute professional tutoring, academic advice, or guaranteed learning outcomes.
+
+AI‑generated explanations, answers, or study suggestions may contain errors, omissions, or inaccuracies. The model is not a substitute for qualified teachers, textbooks, or official course materials.
+
+Always verify critical information with trusted academic sources or instructors. The developer assumes no liability for any academic performance issues, misunderstandings, or other damages arising from the use of this software.
+
+Use at your own risk.
 
 ## ⚙️ Run Locally
 
