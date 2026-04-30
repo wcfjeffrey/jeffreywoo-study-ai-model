@@ -92,6 +92,14 @@ This app integrates learning science theories into AI-driven flashcards and quiz
 
 ## 📐Data Flow and Logic Sequence
 
+The following diagram illustrates how the system transforms uploaded study materials into personalized learning content — from file upload through Gemini API generation (flashcards, quizzes, study guides, mindmaps), then applying spaced repetition, active recall, Bloom's Taxonomy, and cognitive load principles — applying the learning science theories described above at each stage.
+
+> **How to read this diagram:** The flow follows 4 phases:
+> 1. **Material Upload** — Text files or photos/screenshots
+> 2. **AI Content Generation** — Gemini API creates flashcards, quizzes, guides, mindmaps
+> 3. **Learning Science Application** — Spaced repetition, active recall, Bloom's Taxonomy, cognitive load chunking
+> 4. **Interactive Study** — AI tutor mode, explanations, progress tracking, export
+
 ```mermaid
 flowchart TD
     subgraph PHASE1["Phase 1: Material Upload"]
