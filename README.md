@@ -90,6 +90,47 @@ This app integrates learning science theories into AI-driven flashcards and quiz
 <img src="assets/JeffreyWooStudy11.png" alt="JeffreyWooStudy11" width="1200" height="900" />
 <img src="assets/JeffreyWooStudy12.png" alt="JeffreyWooStudy12" width="1200" height="900" />
 
+## 📐Data Flow and Logic Sequence
+
+```mermaid
+flowchart TD
+    subgraph PHASE1["Phase 1: Material Upload"]
+        direction TB
+        A1["Upload Study Materials"] --> A2["Text File TXT"]
+        A1 --> A3["Photo or Screenshot"]
+        A2 --> A4["Send to Backend"]
+        A3 --> A4
+    end
+
+    subgraph PHASE2["Phase 2: AI Content Generation"]
+        direction TB
+        B1["Gemini API Processes Content"] --> B2["Generate Flashcards"]
+        B2 --> B3["Generate Quizzes"]
+        B3 --> B4["Generate Study Guides"]
+        B4 --> B5["Generate Mindmaps"]
+    end
+
+    subgraph PHASE3["Phase 3: Learning Science Application"]
+        direction TB
+        C1["Apply Spaced Repetition"] --> C2["Schedule Review Intervals"]
+        C2 --> C3["Apply Active Recall"]
+        C3 --> C4["Apply Bloom's Taxonomy Levels"]
+        C4 --> C5["Chunk Content by Cognitive Load"]
+    end
+
+    subgraph PHASE4["Phase 4: Interactive Study"]
+        direction TB
+        D1["AI Tutor Mode"] --> D2["Answer Questions"]
+        D2 --> D3["Provide Explanations"]
+        D3 --> D4["Track Progress"]
+        D4 --> D5["Export Notes and Mindmaps"]
+    end
+
+    A4 --> B1
+    B5 --> C1
+    C5 --> D1
+```
+
 ## ⚖️ Disclaimer
 **JeffreyWooStudy** provides AI‑driven insights for informational, educational, and demonstration purposes only. It does not constitute professional tutoring, academic advice, or guaranteed learning outcomes.
 
