@@ -139,6 +139,55 @@ flowchart TD
 <img src="assets/JeffreyWooStudy11.png" alt="JeffreyWooStudy11" width="1200" height="900" />
 <img src="assets/JeffreyWooStudy12.png" alt="JeffreyWooStudy12" width="1200" height="900" />
 
+## References
+
+**1. Learning Theories & Models**
+
+**Spaced Repetition Theory (Ebbinghaus Forgetting Curve, ensuring learners review material at optimal intervals to strengthen memory consolidation)**
+
+- [Ebbinghaus, H. (1885). Memory: A Contribution to Experimental Psychology (H. A. Ruger & C. E. Bussenius, Trans.). Teachers College, Columbia University. (Original work published 1885)](https://dn721504.ca.archive.org/0/items/memorycontributi00ebbiuoft/memorycontributi00ebbiuoft.pdf)
+
+**Active Recall Principle (Quizzes are designed to force retrieval practice, a method proven to enhance long-term retention compared to passive review)**
+
+- [Roediger, H. L., & Karpicke, J. D. (2006). Test-enhanced learning: Taking memory tests improves long-term retention. Psychological Science, 17(3), 249–255.](https://gwern.net/doc/psychology/spaced-repetition/2006-roediger.pdf)
+
+**Constructivist Learning Theory & Zone of Proximal Development (Learners build knowledge progressively, the app scaffolds questions from simple recall to complex application, mirroring Vygotsky’s Zone of Proximal Development)**
+
+- [Vygotsky, L. S. (1978). Mind in society: The development of higher psychological processes (M. Cole, V. John-Steiner, S. Scribner, & E. Souberman, Eds.). Harvard University Press. (Original work published 1934)](https://home.fau.edu/musgrove/web/vygotsky1978.pdf)
+
+**Bloom's Taxonomy (Question generation spans multiple cognitive levels: remembering, understanding, applying, analyzing, evaluating, and creating, ensuring comprehensive skill development)**
+
+- [Anderson, L. W., & Krathwohl, D. R. (Eds.). (2001). A taxonomy for learning, teaching, and assessing: A revision of Bloom's taxonomy of educational objectives. Longman. (Original work published 1956 by B. S. Bloom)](https://www.scribd.com/document/497489412/A-Taxonomy-for-Learning-Teaching-and-Assessing-A-Revision-of-Bloom-s-Taxonomy-of-Educational-Objectives-PDFDrive-com)
+
+**Metacognition & Self-Regulated Learning (The app provides feedback loops, encouraging learners to reflect on their performance and adjust study strategies)**
+
+- [Flavell, J. H. (1979). Metacognition and cognitive monitoring: A new area of cognitive-developmental inquiry. American Psychologist, 34(10), 906–911.](https://jgregorymcverry.com/readings/flavell1979MetacognitionAndCogntiveMonitoring.pdf)
+- [Zimmerman, B. J. (2002). Becoming a self-regulated learner: An overview. Theory Into Practice, 41(2), 64–70.](https://people.bath.ac.uk/edspd/Weblinks/PGCES%20ULL%20articles/Learning%20to%20Learn/Zimmerman%202002%20TiP.pdf)
+
+**Dual Coding Theory (Flashcards combine text with visuals, leveraging both verbal and non-verbal channels to improve comprehension and recall)**
+
+- [Paivio, A. (1990). Mental representations: A dual coding approach. Oxford University Press.](https://api.pageplace.de/preview/DT0400.9780195362008_A42802291/preview-9780195362008_A42802291.pdf)
+
+**Cognitive Load Theory (Content is chunked into manageable units, preventing overload and maximizing working memory efficiency)**
+
+- [Sweller, J. (1988). Cognitive load during problem solving: Effects on learning. Cognitive Science, 12(2), 257–285.](https://mrbartonmaths.com/resourcesnew/8.%20Research/Explicit%20Instruction/Cognitive%20Load%20during%20problem%20solving.pdf)
+- [Sweller, J., van Merriënboer, J. J. G., & Paas, F. G. W. C. (2019). Cognitive architecture and instructional design: 20 years later. Educational Psychology Review, 31(2), 261–292.](https://www.researchgate.net/publication/344435215_Cognitive_Architecture_and_Instructional_Design_20_Years_Later)
+
+**2. Technology Stack**
+
+**Gemini API (AI-powered content generation – processes uploaded materials to generate flashcards, quizzes, study guides, and mindmaps)**
+
+- [Gemini Team, Google. Gemini API.](https://ai.google.dev/gemini-api/docs)
+
+**React (with Vite) & TypeScript (Interactive dashboards to visualize learning progress, flashcards, quizzes, study guides, and mindmaps)**
+
+- [Biasi, B. Vite: Next Generation Frontend Tooling.](https://vite.dev/)
+- [Facebook Open Source. React: The Library for Web and Native User Interfaces.](https://github.com/facebook/react)
+
+**Node.js (Backend runtime environment for the application)**
+
+- [Node.js Foundation. Node.js® JavaScript Runtime.](https://nodejs.org/)
+
 ## ⚖️ Disclaimer
 **JeffreyWooStudy** provides AI‑driven insights for informational, educational, and demonstration purposes only. It does not constitute professional tutoring, academic advice, or guaranteed learning outcomes.
 
