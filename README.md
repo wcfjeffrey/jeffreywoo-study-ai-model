@@ -139,7 +139,7 @@ flowchart TD
 <img src="assets/JeffreyWooStudy11.png" alt="JeffreyWooStudy11" width="1200" height="900" />
 <img src="assets/JeffreyWooStudy12.png" alt="JeffreyWooStudy12" width="1200" height="900" />
 
-## References
+## 📚 References
 
 **1. Learning Theories & Models**
 
